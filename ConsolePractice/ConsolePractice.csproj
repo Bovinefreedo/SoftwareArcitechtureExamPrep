@@ -7,13 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Basics\" />
-    <Folder Include="LinkedLists\" />
-    <Folder Include="Functionel\" />
-    <Folder Include="Hashing\" />
-    <Folder Include="ONotation\" />
-    <Folder Include="Sorting\" />
-  </ItemGroup>
-
 </Project>
