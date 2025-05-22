@@ -9,7 +9,6 @@ namespace ExtraAssignments.ExtraCredit
     public class Queens
     {
         private int numberOfSolutions = 0;
-        public Queens() { }
 
         //This function checks if the placement of a queen is legal.
         public bool legalPlacement(string[][] board, int column, int row)
