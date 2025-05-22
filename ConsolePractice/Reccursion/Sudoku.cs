@@ -8,30 +8,42 @@ namespace ConsolePractice.Reccursion
 {
     public class Sudoku
     {
-        public bool legalRow(int[,] sudoku, int row){
+        int[,] sudoku = new int[9, 9] {
+            { 5, 3, 0, 0, 7, 0, 0, 0, 0 },
+            { 6, 0, 0, 1, 9, 5, 0, 0, 0 },
+            { 0, 9, 8, 0, 0, 0, 0, 6, 0 },
+            { 8, 0, 0, 0, 6, 0, 0, 0, 3 },
+            { 4, 0, 0, 8, 0, 3, 0, 0, 1 },
+            { 7, 0, 0, 0, 2, 0, 0, 0, 6 },
+            { 0, 6 ,0 ,0 ,0 ,2 ,8 ,0 ,0 },
+            { 0 ,0 ,4 ,1 ,9 ,5 ,0 ,0 ,8 },
+            { 9 ,8 ,7 ,4 ,3 ,6 ,2 ,1 ,5 }
+        };
+
+        public bool legalRow(int row){
             return false;
         }
 
-        public bool legalColumn(int[,] sudoku, int column)
+        public bool legalColumn(int column)
         {
             return false;
         }
 
-        public bool legalSquare(int[,] sudoku, int row, int column)
+        public bool legalSquare(int row, int column)
         {
             int squareRow = row / 3;
             int squareColumn = column / 3;
             return false;
         }
 
-        public bool legalSudoku(int[,] sudoku) {
+        public bool legalSudoku() {
 
             for (int i = 0; i < 9; i++) {
-                if (!legalRow(sudoku, i))
+                if (!legalRow(i))
                 {
                     return false;
                 }
-                if (!legalColumn(sudoku, i)) {
+                if (!legalColumn(i)) {
                     return false;
                 }
             }
@@ -39,7 +51,7 @@ namespace ConsolePractice.Reccursion
             {
                 for (int column = 0; column < 9; column += 3)
                 {
-                    if (!legalSquare(sudoku, row, column))
+                    if (!legalSquare(row, column))
                     {
                         return false;
                     }
@@ -68,11 +80,11 @@ namespace ConsolePractice.Reccursion
             return true;
         }
 
-        public void solveSquare(int[,] sudoku, int row, int column) { 
+        public void solve(int row, int column) { 
             
         }
 
-        public void printSudoku(int[,] sudoku)
+        public void printSudoku()
         {
             Console.WriteLine("-----------------------");
             for (int i = 0; i < 9; i++)
