@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsolePractice.Reccursion;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +11,11 @@ namespace PracticeTests.ConsolePractice.Reccursion
     public class QueensTest
     {
         [TestMethod]
-        public void QueensNTest(){ 
-            
+        public void QueensNTest(){
+            Queens queens = new Queens();
+            Assert.AreEqual(1, queens.QueensN(1));
+            Assert.AreEqual(92, queens.QueensN(8));
+            Assert.AreEqual(724, queens.QueensN(10));
         }
 
     }

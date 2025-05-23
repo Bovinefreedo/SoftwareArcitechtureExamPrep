@@ -1,2 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using ConsolePractice.Reccursion;
+
+Queens queens = new Queens();
+
+Console.WriteLine(queens.QueensN(13));
