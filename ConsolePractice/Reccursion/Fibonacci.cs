@@ -24,7 +24,12 @@ namespace ConsolePractice.Reccursion
         public static int[] listOfFib(int n)
         {
             int[] array = new int[n];
-            return listOfFib(n);
+            return listOfFib(n, array);
+        }
+
+        public static int[] listOfFib(int n, int[] array)
+        {
+            return new int[0];
         }
     }
 }

@@ -35,6 +35,9 @@ namespace ConsolePractice.Reccursion
             if (row == board.GetLength(0))
             {
                 numberOfSolutions++;
+                printBoard(board);
+                Console.ReadLine();
+                Console.WriteLine("more solutions");
                 return;
             }
             for (int column = 0; column < board.GetLength(0); column++)
